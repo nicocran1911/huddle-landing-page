@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ChatImage from "./components/ChatImage";
+import Navbar from "./components/Navbar";
+import Register from "./components/Register";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="lg:bg-[url('./images/bg-desktop.svg')] bg-purple-700 bg-[url('./images/bg-mobile.svg')] bg-no-repeat lg:bg-center bg-contain">
+      <Navbar />
+      <div className="lg:flex">
+        <ChatImage className="ml-10" />
+        <Register />
+      </div>
     </div>
   );
 }
